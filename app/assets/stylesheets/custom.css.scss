@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+
+
+
 /* mixins, variables, etc. */
 
 @mixin box_sizing {
@@ -10,6 +13,7 @@
 
 $grayMediumLight: #eaeaea;
 
+
 /* universal */
 
 html {
@@ -19,6 +23,8 @@ html {
 body {
   padding-top: 60px;
 }
+
+
 
 section {
   overflow: auto;
@@ -158,3 +164,8 @@ aside {
   @extend .control-group;
   @extend .error;
  }
+
+.hero-unit {
+  padding-top: 10px;
+  padding-left: 10px;
+}
