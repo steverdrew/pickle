@@ -90,8 +90,8 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
+  margin-top: 20px;
+  padding-top: 10px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
   a {
@@ -166,6 +166,10 @@ aside {
  }
 
 .hero-unit {
-  padding-top: 10px;
+  padding-top: 1px;
   padding-left: 10px;
+  background-color: #f5f5f5;
+  margin-bottom: 5px;
+  padding: 1px;
+  
 }
