@@ -2,4 +2,17 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  #Main Page
+  owners_sign_up_txt: "Owners - Get 3 Months Free! No Credit Card Required"
+  owners_sign_up_btn: "Owners Sign Up Now!"
+  
+  # Main page slider
+  main_silder_feature1: "Search, Compare, Organise"
+  main_silder_feature2: "Book and Pay Direct Online"
+  main_silder_feature3: "Collaborate and Contribute"
+  main_silder_feature4: "Keep Updated"
+  
+  main_silder_feature1_txt: "Find your perfect property using our intuitive search options. Compare listings and create multiple shortlists"
+  main_silder_feature2_txt: "Book online and never forget a payment! It's never been easier to organise a holiday direct with the owner."
+  main_silder_feature3_txt: "Collaborate your property search and selection with others. Leave feedback about your stay and experiences of the area"
+  main_silder_feature4_txt: "Receive updates about your favourite properties and areas. "

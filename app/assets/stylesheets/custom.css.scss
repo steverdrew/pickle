@@ -170,3 +170,24 @@ aside {
   padding: 1px;
   
 }
+
+.fade {
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -ms-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+  opacity: 0;
+}
+.fade.in {
+  opacity: 1;
+}
+
+.nav {
+  position:relative;
+  padding-top: 1px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  padding: 1px; 
+  
+}
