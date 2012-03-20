@@ -11,7 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 
-//= require jquery-1.3.2.min.js
 //= require jquery
 //= require jquery_ujs
 //= require jquery.easing.1.3.js
