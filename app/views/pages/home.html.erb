@@ -1,4 +1,17 @@
-<div class="center hero-unit"> 
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".carousel").dualSlider({
+			auto:true,
+			autoDelay: 6000,
+			easingCarousel: "swing",
+			easingDetails: "easeOutBack",
+			durationCarousel: 1000,
+			durationDetails: 600
+		});	
+	});		
+</script>
+	
+	<div class="center hero-unit"> 
 	<table>
     	<tr>
       		<td rowspan="2">
@@ -32,6 +45,66 @@
        	<p><a class="btn" href="#">View details &raquo;</a></p>
     </div>
 </div>
+
+<div class="carousel clearfix">
+
+			<div class="panel">
+				
+				<div class="details_wrapper">
+					
+					<div class="details">
+					
+						<div class="detail">
+							<h2 class="Lexia-Bold"><a href="#">Dolor sit amet</a> Cum sociis natoque penatibus et magnis dis parturient montes</h2>
+							<a href="#" title="Read more" class="more">Read more</a>
+						</div><!-- /detail -->
+						
+						<div class="detail">
+							<h2 class="Lexia-Bold"><a href="#">Lorem ipsum dolor</a> sit amet, consectetuer adipiscing elit. </h2>
+							<a href="#" title="Read more" class="more">Read more</a>
+						</div><!-- /detail -->
+						
+						<div class="detail">
+							<h2 class="Lexia-Bold"><a href="#">Aenean massa</a>. Cum sociis natoque penatibus et magnis dis parturient montes</h2>
+							<a href="#" title="Read more" class="more">Read more</a>
+						</div><!-- /detail -->
+						
+					
+					</div><!-- /details -->
+					
+				</div><!-- /details_wrapper -->
+				
+				<div class="paging">
+					<div id="numbers"></div>
+					<a href="javascript:void(0);" class="previous" title="Previous" >Previous</a>
+					<a href="javascript:void(0);" class="next" title="Next">Next</a>
+				</div><!-- /paging -->
+				
+				<a href="javascript:void(0);" class="play" title="Turn on autoplay">Play</a>
+				<a href="javascript:void(0);" class="pause" title="Turn off autoplay">Pause</a>
+				
+			</div><!-- /panel -->
+	
+			<div class="backgrounds">
+				
+				<div class="item item_1">
+					<object width="604" height="340"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=10930565&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=10930565&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="604" height="340" wmode="transparent"></embed></object>
+				</div><!-- /item -->
+				
+				<div class="item item_2">
+					<object width="604" height="340"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=12257932&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=12257932&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="604" height="340" wmode="transparent"></embed></object>
+				</div><!-- /item -->
+				
+				<div class="item item_3">
+					
+				</div><!-- /item -->
+				
+			</div><!-- /backgrounds -->
+			
+			
+		</div><!-- /carousel --> 
+		
+
 
 <!-- Modals -->
 <%= render 'modals/owner_register' %>
