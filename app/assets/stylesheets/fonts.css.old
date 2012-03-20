@@ -1,0 +1,121 @@
+/*
+
+@font-face {
+	font-family: 'LexiaXBoldItalic';
+	src: url('lexia_std_xbolditalic-webfont.eot');
+	src: local('☺'), url('lexia_std_xbolditalic-webfont.woff') format('woff'), url('lexia_std_xbolditalic-webfont.ttf') format('truetype'), url('lexia_std_xbolditalic-webfont.svg#webfont0nazwoox') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaXBoldRegular';
+	src: url('lexia_std_xbold-webfont.eot');
+	src: local('☺'), url('lexia_std_xbold-webfont.woff') format('woff'), url('lexia_std_xbold-webfont.ttf') format('truetype'), url('lexia_std_xbold-webfont.svg#webfontTwYkVNb6') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaThinItalic';
+	src: url('lexia_std_thinitalic-webfont.eot');
+	src: local('☺'), url('lexia_std_thinitalic-webfont.woff') format('woff'), url('lexia_std_thinitalic-webfont.ttf') format('truetype'), url('lexia_std_thinitalic-webfont.svg#webfontouSi36MN') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaThinRegular';
+	src: url('lexia_std_thin-webfont.eot');
+	src: local('☺'), url('lexia_std_thin-webfont.woff') format('woff'), url('lexia_std_thin-webfont.ttf') format('truetype'), url('lexia_std_thin-webfont.svg#webfont8P1hXiqJ') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+@font-face {
+	font-family: 'LexiaLightItalic';
+	src: url('lexia_std_lightitalic-webfont.eot');
+	src: local('☺'), url('lexia_std_lightitalic-webfont.woff') format('woff'), url('lexia_std_lightitalic-webfont.ttf') format('truetype'), url('lexia_std_lightitalic-webfont.svg#webfontm6vm7aP0') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaLightRegular';
+	src: url('lexia_std_light-webfont.eot');
+	src: local('☺'), url('lexia_std_light-webfont.woff') format('woff'), url('lexia_std_light-webfont.ttf') format('truetype'), url('lexia_std_light-webfont.svg#webfontqu2gzakA') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaItalic';
+	src: url('lexia_std_italic-webfont.eot');
+	src: local('☺'), url('lexia_std_italic-webfont.woff') format('woff'), url('lexia_std_italic-webfont.ttf') format('truetype'), url('lexia_std_italic-webfont.svg#webfontqmP9MMNt') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaBlackItalic';
+	src: url('lexia_std_blackitalic-webfont.eot');
+	src: local('☺'), url('lexia_std_blackitalic-webfont.woff') format('woff'), url('lexia_std_blackitalic-webfont.ttf') format('truetype'), url('lexia_std_blackitalic-webfont.svg#webfont5jL7buRy') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaBlackRegular';
+	src: url('lexia_std_black-webfont.eot');
+	src: local('☺'), url('lexia_std_black-webfont.woff') format('woff'), url('lexia_std_black-webfont.ttf') format('truetype'), url('lexia_std_black-webfont.svg#webfontWQZbvtZe') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaBoldItalic';
+	src: url('lexia_std_bditalic-webfont.eot');
+	src: local('☺'), url('lexia_std_bditalic-webfont.woff') format('woff'), url('lexia_std_bditalic-webfont.ttf') format('truetype'), url('lexia_std_bditalic-webfont.svg#webfontoQBKFPlV') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*/
+
+
+@font-face {
+	font-family: 'LexiaRegular';
+	src: url('lexia_std_rg-webfont.eot');
+	src: local('☺'), url('lexia_std_rg-webfont.woff') format('woff'), url('lexia_std_rg-webfont.ttf') format('truetype'), url('lexia_std_rg-webfont.svg#webfontQjbJKj8L') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'LexiaBold';
+	src: url('lexia_std_bd-webfont.eot');
+	src: local('☺'), url('lexia_std_bd-webfont.woff') format('woff'), url('lexia_std_bd-webfont.ttf') format('truetype'), url('lexia_std_bd-webfont.svg#webfonte5YVG419') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*
+
+.LexiaXBold-Italic {font-weight: normal; font-style: normal; line-height:normal; font-family: 'LexiaXBoldItalic', sans-serif;}
+.LexiaXBold-Regular {font-weight: normal; font-style: normal; line-height:normal; font-family: 'LexiaXBoldRegular', sans-serif;}
+.LexiaThin-Italic {font-weight: normal; font-style: normal; line-height:normal; font-family: 'LexiaThinItalic', sans-serif;}
+.LexiaThin-Regular {font-weight: normal; font-style: normal; line-height:normal; font-family: 'LexiaThinRegular', sans-serif;}
+.LexiaLight-Italic {font-weight: normal; font-style: normal; line-height:normal; font-family: 'LexiaLightItalic', sans-serif;}
+.LexiaLight-Regular {font-weight: normal; font-style: normal; line-height:normal; font-family: 'LexiaLightRegular', sans-serif;}
+.Lexia-Italic {font-weight: normal; font-style: normal; line-height:normal; font-family: 'LexiaItalic', sans-serif;}
+.LexiaBlack-Italic {font-weight: normal; font-style: normal; line-height:normal; font-family: 'LexiaBlackItalic', sans-serif;}
+.LexiaBlack-Regular {font-weight: normal; font-style: normal; line-height:normal; font-family: 'LexiaBlackRegular', sans-serif;}
+.Lexia-BoldItalic {font-weight: normal; font-style: normal; line-height:normal; font-family: 'LexiaBoldItalic', sans-serif;}
+
+*/
+
+.Lexia-Regular {font-weight: normal; font-style: normal; line-height:normal; font-family: 'LexiaRegular', sans-serif;}
+.Lexia-Bold {font-weight: normal; font-style: normal; line-height:normal; font-family: 'LexiaBold', sans-serif; letter-spacing:-1px}
+		
+
