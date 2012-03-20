@@ -11,8 +11,11 @@ Pickle::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   root to: 'pages#home'
+  match '/register',   to: 'pages#register'
+  
   
   get "pages/home"
+  get "pages/register"
   
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
