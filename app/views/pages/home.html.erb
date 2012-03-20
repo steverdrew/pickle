@@ -1,21 +1,8 @@
-<script type="text/javascript">
-	$(document).ready(function() {
-		$(".carousel").dualSlider({
-			auto:true,
-			autoDelay: 6000,
-			easingCarousel: "swing",
-			easingDetails: "easeOutBack",
-			durationCarousel: 1000,
-			durationDetails: 600
-		});	
-	});		
-</script>
-	
-	<div class="center hero-unit"> 
+<div class="center hero-unit"> 
 	<table>
     	<tr>
       		<td rowspan="2">
-      			<%= render 'shared/slider' %>
+      			<%= render 'shared/feature_carousel' %>
       		</td>
       		<td>
      			<a class="btn btn-primary btn-large" href=""><%=t :owners_sign_up_txt %></a>

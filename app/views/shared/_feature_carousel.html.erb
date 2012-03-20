@@ -1,0 +1,63 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);
+	});
+</script>
+ 
+  <div id="featured" >  
+<ul class="ui-tabs-nav">  
+    <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1">
+    	<a href="#fragment-1"><%= image_tag("banner/image1-small.jpg") %>
+    		<span><%=t :main_silder_feature1 %></span>
+    	</a>
+    </li>  
+    <li class="ui-tabs-nav-item" id="nav-fragment-2">
+    	<a href="#fragment-2"><%= image_tag("banner/image2-small.jpg") %>
+    		<span><%=t :main_silder_feature2 %></span>
+    	</a>
+    </li>  
+    <li class="ui-tabs-nav-item" id="nav-fragment-3">
+    	<a href="#fragment-3"><%= image_tag("banner/image3-small.jpg") %>
+    		<span><%=t :main_silder_feature3 %></span>
+    	</a>
+    </li>  
+    <li class="ui-tabs-nav-item" id="nav-fragment-4">
+    	<a href="#fragment-4"><%= image_tag("banner/image4-small.jpg") %>
+    		<span><%=t :main_silder_feature4 %></span>
+    	</a>
+    </li>  
+</ul>  
+
+<!-- First Content -->  
+<div id="fragment-1" class="ui-tabs-panel" style="">  
+    <%= image_tag("banner/image1.jpg") %>  
+    <div class="info" >  
+    <h2><a href="#" ><%=t :main_silder_feature1 %></a></h2>  
+    <p><%=t :main_silder_feature1_txt %><a href="#" > ...read more</a></p>  
+    </div>  
+</div>  
+<!-- Second Content -->  
+<div id="fragment-2" class="ui-tabs-panel ui-tabs-hide" style="">  
+    <%= image_tag("banner/image2.jpg") %>  
+    <div class="info" >  
+    <h2><a href="#" ><%=t :main_silder_feature2 %></a></h2>  
+    <p><%=t :main_silder_feature2_txt %><a href="#" > ...read more</a></p>  
+    </div>  
+</div>  
+<!-- Third Content -->  
+<div id="fragment-3" class="ui-tabs-panel ui-tabs-hide" style="">  
+    <%= image_tag("banner/image3.jpg") %>  
+    <div class="info" >  
+    <h2><a href="#" ><%=t :main_silder_feature3 %></a></h2>  
+    <p><%=t :main_silder_feature3_txt %><a href="#" > ...read more</a></p>  
+    </div>  
+</div>  
+<!-- Fourth Content -->  
+<div id="fragment-4" class="ui-tabs-panel ui-tabs-hide" style="">  
+    <%= image_tag("banner/image4.jpg") %>  
+    <div class="info" >  
+    <h2><a href="#" ><%=t :main_silder_feature4 %></a></h2>  
+    <p><%=t :main_silder_feature4_txt %><a href="#" > ...read more</a></p>  
+    </div>  
+</div>  
+</div>
