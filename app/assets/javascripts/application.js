@@ -19,3 +19,19 @@
 //= require_tree .
 
 
+//featured properties
+$(document).ready(function() {
+	
+	$(".carousel").dualSlider({
+		auto:true,
+		autoDelay: 6000,
+		easingCarousel: "swing",
+		easingDetails: "easeOutBack",
+		durationCarousel: 1000,
+		durationDetails: 600
+	});
+		
+	});		
+	
+
+
