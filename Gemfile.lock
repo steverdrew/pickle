@@ -28,8 +28,10 @@ GEM
     activesupport (3.2.2)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    addressable (2.2.7)
     annotate (2.4.0)
     arel (3.0.2)
+    bcrypt-ruby (3.0.1-x86-mingw32)
     bootstrap-sass (2.0.0)
     builder (3.0.0)
     capybara (1.1.2)
@@ -63,6 +65,10 @@ GEM
     erubis (2.7.0)
     execjs (1.3.0)
       multi_json (~> 1.0)
+    faraday (0.7.6)
+      addressable (~> 2.2)
+      multipart-post (~> 1.1)
+      rack (~> 1.1)
     ffi (1.0.11)
     gherkin (2.9.0-x86-mingw32)
       json (>= 1.4.6)
@@ -79,7 +85,12 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.1.0)
+    multipart-post (1.1.5)
     nokogiri (1.5.2-x86-mingw32)
+    oauth (0.4.5)
+    oauth2 (0.5.2)
+      faraday (~> 0.7)
+      multi_json (~> 1.0)
     pg (0.13.2-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -131,6 +142,11 @@ GEM
       ffi (~> 1.0)
       multi_json (~> 1.0)
       rubyzip
+    sorcery (0.7.7)
+      bcrypt-ruby (~> 3.0.0)
+      oauth (~> 0.4.4)
+      oauth2 (~> 0.5.1)
+      sorcery
     spork (0.9.0-x86-mingw32)
       win32-process
     sprockets (2.1.2)
@@ -174,6 +190,7 @@ DEPENDENCIES
   rspec
   rspec-rails
   sass-rails (~> 3.2.3)
+  sorcery
   spork
   sqlite3
   uglifier (>= 1.0.3)

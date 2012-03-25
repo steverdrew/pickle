@@ -1,4 +1,9 @@
 Pickle::Application.routes.draw do
+  resources :users
+  
+  get "sessions/new"
+  get "users/new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -11,7 +16,7 @@ Pickle::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   root to: 'pages#home'
-  match '/register',   to: 'pages#register'
+  match '/register',   to: 'users#new'
   
   
   get "pages/home"
