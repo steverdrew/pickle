@@ -1,11 +1,12 @@
 Pickle::Application.routes.draw do
   resources :users
   
+  root to: 'pages#home'
+  
   get "sessions/new"
   get "users/new"
   get "pages/home"
   
-  root to: 'pages#home'
   match '/register',   to: 'users#new'
   
   resources :users do
