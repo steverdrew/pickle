@@ -1,4 +1,6 @@
 Pickle::Application.routes.draw do
+  get "person/new"
+
   resources :users
   
   root to: 'pages#home'

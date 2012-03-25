@@ -3,10 +3,9 @@
 		<div class="span7">	
 			<div class="well">
 				<form class="form-horizontal">
-					<fieldset class="control-group error">>
+					<fieldset class="control-group error">
 					  	<% if @user.errors.any? %>
-        					<% for message in @user.errors.full_messages %>
-        					
+        					<% for message in @user.errors.full_messages %>		
           						<li><%= message %></li>
         					<% end %>
 						<% end %>
@@ -32,7 +31,7 @@
 							</div>
 							<div class="controls">
 								<p class="help-block">Re-enter your email address</p>
-							 	<input type="text" class="input-xlarge" id="email-validate">
+								<%= f.text_field :email_confirmation, class: "input-xlarge" %>
 							</div>
 						</div>	
 						<div class="control-group">
@@ -49,11 +48,12 @@
 							<div class="controls">
 								<label class="checkbox">
 				            		<input type="checkbox" name="terms-check" value="terms">
-				            		I'm also a property owner
+				            		I'm a property owner
 				          		</label>
 								<label class="checkbox">
-				            		<input type="checkbox" name="terms-check" value="terms">
-				            		I've read the terms and conditions
+				            		<%= f.check_box :terms_accepted%> 
+
+				            		I've read the <a data-toggle="modal" href="#terms" >terms and conditions</a>
 				          		</label>
 							</div>
 						</div>
@@ -61,7 +61,7 @@
 							<div class="control-group">
 								<div class="controls">
 									<%= f.submit "Register Now!", class: "btn btn-primary" %>
-									<button class="btn ">Cancel</button>
+									<%= link_to "Cancel", root_path %>
 								</div>
 							</div>
 						</div>	

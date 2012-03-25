@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
   
-  skip_before_filter :require_login, :only => [:create, :activate]
-  
   def new
     @user = User.new
   end
@@ -9,7 +7,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to root_url, :notice => "Signed up!"
+      redirect_to root_url
+      flash[:success] = "Thank you for signing up! Please check your email to activate your account."
     else
       render :new
     end
