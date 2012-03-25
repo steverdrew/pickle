@@ -1,17 +1,14 @@
-<%= form_for @user do |f| %>
-	  <div class="row">
-		<div class="span7">	
-			<div class="well">
-				<form class="form-horizontal">
-					<fieldset class="control-group error">
-					  	<% if @user.errors.any? %>
-        					<% for message in @user.errors.full_messages %>		
-          						<li><%= message %></li>
-        					<% end %>
-						<% end %>
-					</fieldset>
-					<fieldset>
-						<legend>Welcome Aboard!</legend>
+<div class="row">
+	<div class="span7">	
+		<% if @user.errors.any? %>
+    		<% for message in @user.errors.full_messages %>		
+      			<li><%= message %></li>
+    		<% end %>
+		<% end %>
+		<div class="well">
+			<%= form_for(@user,:html => { :class => "form-horizontal"}) do |f| %>
+				<fieldset>		
+					<legend>Welcome Aboard!</legend>
 						<div class="control-group">
 							<label class="control-label" for="input01">First Name</label>
 							<div class="controls">
@@ -25,9 +22,9 @@
 							</div>
 						</div>
 						<div class="control-group">
-							<%= f.label :email,"Email Address", class: "control-label"%>
+							<%= f.label :email, "Email Address", class: "required control-label"%>
 							<div class="controls">
-								<%= f.text_field :email, class: "input-xlarge" %>
+								<%= f.text_field :email, class: "required input-xlarge" %>
 							</div>
 							<div class="controls">
 								<p class="help-block">Re-enter your email address</p>
@@ -65,18 +62,20 @@
 								</div>
 							</div>
 						</div>	
-					</fieldset>
-				</form>	
-			</div>
-		</div>
-		<div class="span5">	
-			<div class="well">
-				<form class="form-horizontal">
-					<fieldset>
-						<legend>Already using one of these?</legend>
-						<p class="help-block">Select an existing provider for a no hassle sign up!</p>
-				</div>
+				</fieldset>		
+			<% end %>	
 		</div>
 	</div>
-<% end %>
+	<div class="span5">	
+		<div class="well">
+			<form class="form-horizontal">
+				<fieldset>
+					<legend>Already using one of these?</legend>
+					<p class="help-block">Select an existing provider for a no hassle sign up!</p>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
 
+				
