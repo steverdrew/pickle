@@ -3,7 +3,18 @@ Pickle::Application.routes.draw do
   
   get "sessions/new"
   get "users/new"
-
+  get "pages/home"
+  
+  root to: 'pages#home'
+  match '/register',   to: 'users#new'
+  
+  resources :users do
+    member do
+      get :activate
+    end
+  end
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -15,12 +26,6 @@ Pickle::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
-  root to: 'pages#home'
-  match '/register',   to: 'users#new'
-  
-  
-  get "pages/home"
-  get "pages/register"
   
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
