@@ -1,0 +1,16 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  # Main page slider
+  features:
+      carousel:
+         heading1: "Search, Compare, Organise"
+         heading2: "Book and Pay Direct Online"
+         heading3: "Collaborate and Contribute"
+         heading4: "Keep Updated"
+         main_text1: "Find your perfect property using our intuitive search options. Compare listings and create multiple shortlists"
+         main_text2: "Book online and never forget a payment! It's never been easier to organise a holiday direct with the owner."
+         main_text3: "Collaborate your property search and selection with others. Leave feedback about your stay and experiences of the area"
+         main_text4: "Receive updates about your favourite properties and areas."
+ 

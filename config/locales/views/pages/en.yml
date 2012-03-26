@@ -2,5 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  defaults:
-    read_more: "read more"
+  #Home Page
+  home: 
+    owners: 
+      signup:
+        button: "Owners - Get 3 Months Free! No Credit Card Required"
+  
