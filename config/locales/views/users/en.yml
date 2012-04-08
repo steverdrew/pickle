@@ -2,3 +2,17 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  new:
+    user:
+      form:
+        legend: "Welcome Aboard!"
+        first_name: "First Name"
+        last_name: "Last Name"
+        email: "Email"
+        email_help: "Re enter your email address"
+        password: "Password"
+        password_help: "Re enter your password"
+        property_owner: "I'm a property owner"
+        register_now: "Register Now!"
+        terms: I've read the <a data-toggle="modal" href="#terms" >terms and conditions</a>
+        

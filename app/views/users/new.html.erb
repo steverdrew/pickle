@@ -8,36 +8,36 @@
 		<div class="well">
 			<%= form_for(@user,:html => { :class => "form-horizontal"}) do |f| %>
 				<fieldset>		
-					<legend>Welcome Aboard!</legend>
+					<legend><%= t 'new.user.form.legend' %></legend>
 						<div class="control-group">
-							<label class="control-label" for="input01">First Name</label>
+							<label class="control-label" for="input01"><%= t 'new.user.form.first_name' %></label>
 							<div class="controls">
-							  <input type="text" class="input-xlarge" id="first-name">
+							  <input type="text" class="input-xlarge" id="first_name">
 							</div>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="input01">Last Name</label>
+							<label class="control-label" for="input01"><%= t 'new.user.form.last-name' %></label>
 							<div class="controls">
-							  <input type="text" class="input-xlarge" id="last-name">
+							  <input type="text" class="input-xlarge" id="last_name">
 							</div>
 						</div>
 						<div class="control-group">
-							<%= f.label :email, "Email Address", class: "required control-label"%>
+							<%= f.label :email,t('new.user.form.email'), class: "required control-label" %>
 							<div class="controls">
 								<%= f.text_field :email, class: "required input-xlarge" %>
 							</div>
 							<div class="controls">
-								<p class="help-block">Re-enter your email address</p>
+								<p class="help-block"><%= t 'new.user.form.email_help' %></p>
 								<%= f.text_field :email_confirmation, class: "input-xlarge" %>
 							</div>
 						</div>	
 						<div class="control-group">
-							<%= f.label :password,"Password", class: "control-label"%>
+							<%= f.label :password,t('new.user.form.password'), class: "required control-label"%>
 							<div class="controls">
     							<%= f.password_field :password, class: "input-xlarge" %>
 							</div>
 							<div class="controls">
-								<p class="help-block">Re-enter your password</p>
+								<p class="help-block"><%= t 'new.user.form.password_help' %></p>
 					    		<%= f.password_field :password_confirmation, class: "input-xlarge" %>
 							</div>
 						</div>
@@ -45,19 +45,19 @@
 							<div class="controls">
 								<label class="checkbox">
 				            		<input type="checkbox" name="terms-check" value="terms">
-				            		I'm a property owner
+				            		<%= t 'new.user.form.property_owner' %>
 				          		</label>
 								<label class="checkbox">
 				            		<%= f.check_box :terms_accepted%> 
 
-				            		I've read the <a data-toggle="modal" href="#terms" >terms and conditions</a>
+				            		<%= t 'new.user.form.register_terms' %>
 				          		</label>
 							</div>
 						</div>
 						<div class="control-group">
 							<div class="control-group">
 								<div class="controls">
-									<%= f.submit "Register Now!", class: "btn btn-primary" %>
+									<%= f.submit t('new.user.form.register_now'), class: "btn btn-primary" %>
 									<%= link_to "Cancel", root_path %>
 								</div>
 							</div>
