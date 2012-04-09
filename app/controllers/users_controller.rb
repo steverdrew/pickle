@@ -2,13 +2,14 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
+    profile = @user.profiles.build
   end
 
   def create
     @user = User.new(params[:user])
     if @user.save
       redirect_to root_url
-      flash[:success] = "Thank you for signing up! Please check your email to activate your account."
+      flash[:success] = "Thanks for signing up! Please check your email to activate your account."
     else
       render :new
     end

@@ -11,12 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120325191811) do
+ActiveRecord::Schema.define(:version => 20120409162152) do
 
-  create_table "people", :force => true do |t|
+  create_table "profiles", :force => true do |t|
+    t.integer  "user_id"
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "user_id"
+    t.boolean  "is_owner"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -25,12 +26,12 @@ ActiveRecord::Schema.define(:version => 20120325191811) do
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
+    t.boolean  "terms_accepted"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
     t.string   "activation_state"
     t.string   "activation_token"
     t.datetime "activation_token_expires_at"
-    t.boolean  "terms_accepted"
   end
 
   add_index "users", ["activation_token"], :name => "index_users_on_activation_token"

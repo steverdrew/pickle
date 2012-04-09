@@ -1,0 +1,21 @@
+<div class="control-group">
+	<%= f.label :first_name, t('new.user.form.first_name'), class: "required control-label" %>
+	<div class="controls">
+		<%= f.text_field :first_name, class: "required input-xlarge" %>
+	</div>
+</div>
+<div class="control-group">
+	<%= f.label :last_name, t('new.user.form.last_name'), class: "required control-label" %>
+	<div class="controls">
+	  <%= f.text_field :last_name, class: "required input-xlarge" %>
+	</div>
+</div>
+
+<div class="control-group">
+	<div class="controls">
+		<label class="checkbox">
+			<%= f.check_box :is_owner %>
+		    <%= t 'new.user.form.property_owner' %>
+		</label>
+	</div>
+</div>

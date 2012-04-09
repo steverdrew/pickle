@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
+  
   authenticates_with_sorcery!
   
-  attr_accessible :email, :email_confirmation, :password, :password_confirmation, :terms_accepted
-
-
+  attr_accessible :email, :email_confirmation, :password, :password_confirmation, :terms_accepted, :profiles_attributes 
+  has_many :profiles
+  accepts_nested_attributes_for :profiles
+  
   validates_presence_of :password, :on => :create
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence:   true,
@@ -19,7 +21,6 @@ class User < ActiveRecord::Base
   private
 
   def validate_terms
-    # one or the other must be provided
       if !terms_accepted
         self.errors.add :base, "You must accept the terms and conditions"
       end

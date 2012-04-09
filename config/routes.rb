@@ -1,4 +1,8 @@
 Pickle::Application.routes.draw do
+  get "people/new"
+
+  get "person_attributes/new"
+
   get "person/new"
 
   resources :users
