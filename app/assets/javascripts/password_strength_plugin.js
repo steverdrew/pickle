@@ -48,10 +48,10 @@
 	 $.fn.passStrength = function(options) {  
 	  
 		 var defaults = {
-				shortPass: 		"shortPass",	//optional
-				badPass:		"badPass",		//optional
-				goodPass:		"goodPass",		//optional
-				strongPass:		"strongPass",	//optional
+				shortPass: 		"badge badge-error pass-badge",	//optional
+				badPass:		"badge badge-warning pass-badge",		//optional
+				goodPass:		"badge badge-info pass-badge",		//optional
+				strongPass:		"badge badge-success pass-badge",	//optional
 				baseStyle:		"testresult",	//optional
 				userid:			"",				//required override
 				messageloc:		1				//before == 0 or after == 1

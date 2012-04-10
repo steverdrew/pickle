@@ -1,3 +1,25 @@
+<script>
+			$(document).ready( function() {
+
+				//BASIC
+				$(".password_test").passStrength({
+					userid:	"#user_id"
+					});
+				
+				//ADVANCED
+				$(".password_adv").passStrength({
+					shortPass: 		"top_shortPass",
+					badPass:		"top_badPass",
+					goodPass:		"top_goodPass",
+					strongPass:		"top_strongPass",
+					baseStyle:		"top_testresult",
+					userid:			"#user_id_adv",
+					messageloc:		0
+				});
+			});
+		</script>
+
+
 <div class="row">
 	<div class="span7">	
 		<% if @user.errors.any? %>
@@ -20,5 +42,3 @@
 		</div>
 	</div>
 </div>
-
-				

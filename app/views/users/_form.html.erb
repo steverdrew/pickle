@@ -1,45 +1,45 @@
-	<%= form_for(@user,:html => { :class => "form-horizontal"}) do |f| %>
-		<fieldset>		
-			<legend><%= t 'new.user.form.legend' %></legend>
-			<%= f.fields_for :profiles do |builder| %>
-				<%= render 'profile_fields', :f => builder %>
-			<% end %>
-			<div class="control-group">
-					<%= f.label :email,t('new.user.form.email'), class: "required control-label" %>
-					<div class="controls">
-						<%= f.text_field :email, class: "required input-xlarge" %>
-					</div>
-					<div class="controls">
-						<p class="help-block"><%= t 'new.user.form.email_help' %></p>
-						<%= f.text_field :email_confirmation, class: "input-xlarge" %>
-					</div>
-			</div>	
-			<div class="control-group">
-				<%= f.label :password,t('new.user.form.password'), class: "required control-label"%>
+<%= form_for(@user,:html => { :class => "form-horizontal"}) do |f| %>
+	<fieldset>		
+		<legend><%= t 'new.user.form.legend' %></legend>
+		<%= f.fields_for :profiles do |builder| %>
+			<%= render 'profile_fields', :f => builder %>
+		<% end %>
+		<div class="control-group">
+				<%= f.label :email,t('new.user.form.email'), class: "required control-label", id: "user_id"%>
 				<div class="controls">
-					<%= f.password_field :password, class: "input-xlarge" %>
+					<%= f.text_field :email, class: "required input-xlarge" %>
 				</div>
 				<div class="controls">
-					<p class="help-block"><%= t 'new.user.form.password_help' %></p>
-		    		<%= f.password_field :password_confirmation, class: "input-xlarge" %>
+					<p class="help-block"><%= t 'new.user.form.email_help' %></p>
+					<%= f.text_field :email_confirmation, class: "input-xlarge" %>
+				</div>
+		</div>	
+		<div class="control-group">
+			<%= f.label :password,t('new.user.form.password'), class: "required control-label"%>
+			<div class="controls">
+				<%= f.password_field :password, class: "input-xlarge password_test" %>
+			</div>
+			<div class="controls">
+				<p class="help-block"><%= t 'new.user.form.password_help' %></p>
+	    		<%= f.password_field :password_confirmation, class: "input-xlarge" %>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<label class="checkbox">
+		    		<%= f.check_box :terms_accepted%> 
+		    		<%= t 'new.user.form.register_terms' %>
+		  		</label>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="control-group">
+				<div class="controls">
+					<%= f.submit t('new.user.form.register_now'), class: "btn btn-primary" %>
+					<%= link_to "Cancel", root_path %>
 				</div>
 			</div>
-			<div class="control-group">
-				<div class="controls">
-					<label class="checkbox">
-			    		<%= f.check_box :terms_accepted%> 
-			    		<%= t 'new.user.form.register_terms' %>
-			  		</label>
-				</div>
-			</div>
-			<div class="control-group">
-				<div class="control-group">
-					<div class="controls">
-						<%= f.submit t('new.user.form.register_now'), class: "btn btn-primary" %>
-						<%= link_to "Cancel", root_path %>
-					</div>
-				</div>
-			</div>	
+		</div>	
 	</fieldset>		
 <% end %>	
 
