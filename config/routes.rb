@@ -1,11 +1,7 @@
 Pickle::Application.routes.draw do
-  get "people/new"
-
-  get "person_attributes/new"
-
-  get "person/new"
 
   resources :users
+  resources :sessions
   
   root to: 'pages#home'
   
@@ -14,7 +10,9 @@ Pickle::Application.routes.draw do
   get "pages/home"
   
   match '/register',   to: 'users#new'
-  
+  match 'login' => 'sessions#new', :as => :login
+  match 'logout' => 'sessions#destroy', :as => :logout
+
   resources :users do
     member do
       get :activate

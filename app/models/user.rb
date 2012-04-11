@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 
   def validate_terms
       if !terms_accepted
-        self.errors.add :base, "You must accept the terms and conditions"
+        self.errors.add :base, "need to be accepted"
       end
   end
 end

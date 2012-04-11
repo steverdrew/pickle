@@ -21,12 +21,7 @@
 
 
 <div class="row">
-	<div class="span7">	
-		<% if @user.errors.any? %>
-    		<% for message in @user.errors.full_messages %>		
-      			<li><%= message %></li>
-    		<% end %>
-		<% end %>
+	<div class="span7">		
 		<div class="well">
 			<%= render 'form' %>
 		</div>

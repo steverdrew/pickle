@@ -14,5 +14,5 @@ en:
         password_help: "Re enter your password"
         property_owner: "I'm a property owner"
         register_now: "Register Now!"
-        terms: I've read the <a data-toggle="modal" href="#terms" >terms and conditions</a>
+        terms_html: I've read the <a data-toggle="modal" href="#terms">terms and conditions</a>
         
