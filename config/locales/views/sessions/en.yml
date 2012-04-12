@@ -1,0 +1,18 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  new:
+    session:
+      form:
+        legend: "Welcome Back!"
+        email: "Email"
+        password: "Password"
+        login: "Login"
+        cancel: "Cancel"
+        error_alert: "Login failed. Please check your credentials."
+        success_alert: "Login successful!"
+        forgot_pass_html: <a href="#">Forgotten Password?</a>
+       
+      logout:
+        alert_html: Successfully logged out!

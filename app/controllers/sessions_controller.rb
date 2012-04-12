@@ -1,25 +1,32 @@
 class SessionsController < ApplicationController
-   def new
+  
+  skip_before_filter :require_login, :except => [:destroy]
+  
+  def new
     @user = User.new
   end
   
+  def index
+  end
+  
   def create
-    if @user = login(params[:email],params[:password])
-      respond_to do |wants|  
-        wants.html { redirect_to user_path(@user_session.user) }  
-        wants.js { render :action => :redirect } # JavaScript to do the redirect  
-      end  
-    else  
-      respond_to do |wants|  
-        wants.html { render :new }  
-        wants.js # defaults to create.js.erb  
-      end  
-    end  
+    respond_to do |format|
+      if @user = login(params[:email],params[:password])
+        format.html { redirect_back_or_to(:root) }
+        flash[:success] = t('new.session.form.success_alert')
+        format.xml { render :xml => @user, :status => :created, :location => @user }
+     else
+        format.html { flash.now[:error] = t('new.session.form.error_alert'); render :action => "new" }
+        format.xml { render :xml => @user.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
     
   def destroy
     logout
-    redirect_to(:users, :notice => 'Logged out!')
+    redirect_to(:root)
+    flash[:success] = t('new.session.logout.alert_html')
+ 
   end
   
 end
-  end

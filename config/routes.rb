@@ -5,11 +5,10 @@ Pickle::Application.routes.draw do
   
   root to: 'pages#home'
   
-  get "sessions/new"
-  get "users/new"
   get "pages/home"
   
   match '/register',   to: 'users#new'
+  match '/login',   to: 'sessions#new'
   match 'login' => 'sessions#new', :as => :login
   match 'logout' => 'sessions#destroy', :as => :logout
 
