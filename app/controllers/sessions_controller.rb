@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
   
   def create
     respond_to do |format|
-      if @user = login(params[:email],params[:password])
+      if @user = login(params[:email], params[:password], params[:remember])
         format.html { redirect_back_or_to(:root) }
         flash[:success] = t('new.session.form.success_alert')
         format.xml { render :xml => @user, :status => :created, :location => @user }

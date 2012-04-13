@@ -1,0 +1,36 @@
+<%= form_tag sessions_path, :method => :post do %>
+	<div class="well">
+		<legend>Login</legend>
+  		<div class="control-group">
+			<%= label :email,t('new.session.form.email'), class: "required control-label", id: "user_id"%>
+			<div class="controls">
+				<div class="required input-xlarge">
+					<%= text_field_tag :email %>
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<%= label :password,t('new.session.form.password'), class: "required control-label"%>
+			<div class="controls">
+				<div class="required input-xlarge">
+					<%= password_field_tag :password %>
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<label class="checkbox">
+		    		<%= check_box_tag :remember%> 
+					<%= t 'new.sesion.form.remember_me' %>
+	      		</label>
+				<% error = @user.errors[:base] %>
+				<span class="badge badge-error"> <%= "..." && error[0] %>
+			</div>
+		</div>
+	  	<div class="modal-footer">
+	    	<%= link_to "Cancel", root_path, class: "btn" %>
+	    	<%= submit_tag t('new.session.form.login'), class: "btn btn-primary" %>
+	    </div>
+	</div>
+<% end %>
+

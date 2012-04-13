@@ -5,7 +5,7 @@ en:
   new:
     user:
       form:
-        legend: "Welcome Aboard!"
+        legend: "Register for a new account"
         first_name: "First Name"
         last_name: "Last Name"
         email: "Email"
