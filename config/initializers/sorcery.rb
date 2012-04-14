@@ -70,7 +70,7 @@ Rails.application.config.sorcery.configure do |config|
   # What providers are supported by this app, i.e. [:twitter, :facebook, :github, :google, :liveid] .
   # Default: `[]`
   #
-  config.external_providers = [:facebook]
+  config.external_providers = [:facebook, :twitter]
 
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
@@ -83,16 +83,17 @@ Rails.application.config.sorcery.configure do |config|
   # Twitter wil not accept any requests nor redirect uri containing localhost,
   # make sure you use 0.0.0.0:3000 to access your app in development
   #
-  #config.twitter.key = ""
-  #config.twitter.secret = ""
-  #config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
-  #config.twitter.user_info_mapping = {:email => "screen_name"}
+  config.twitter.key = "uEhHdwRk7hZwjOBaBtWKXQ"
+  config.twitter.secret = "oJxl1NV27a7PNRRpnYzcHdTzPrAnPTruzHg6yj0u8"
+  config.twitter.callback_url = "http://localhost:3000/oauth/callback?provider=twitter"
+  config.twitter.user_info_mapping = {:username => "screen_name"}
   #
   config.facebook.key = "363285437050502"
   config.facebook.secret = "2a3d40430dc0b7b0e83657d0f24eee27"
-  config.facebook.callback_url = "http://pickle.herokuapp.com/oauth/callback?provider=facebook"
-  config.facebook.user_info_mapping = {:email => "email", :name => "name", :username => "username", :hometown => "hometown/name"}
-  config.facebook.scope = "email,offline_access,user_hometown,user_interests,user_likes" #etc
+  config.facebook.callback_url = "http://localhost:3000/oauth/callback?provider=facebook"
+  config.facebook.user_info_mapping = {:email => "email", :name => "name", :first_name => "first_name", 
+      :middle_name => "middle_name", :last_name => "last_name", :gender => "gender"}
+  config.facebook.scope = "email" #etc
   config.facebook.display = "popup"
   # 
   # config.github.key = ""
