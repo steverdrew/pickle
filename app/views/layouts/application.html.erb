@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pickle</title>
-  <%= csrf_meta_tags %>
+	<title>Pickle</title>
+  	<%= csrf_meta_tags %>
+	<%= render 'layouts/includes' %>
 </head>
 <body>
-    <%= render 'layouts/includes' %>
-	<div class="container">
+    <div class="container">
 		<%= render 'layouts/header' %>
 		<% flash.each do |key, value| %>
         	<div class="alert alert-<%= key %>">
