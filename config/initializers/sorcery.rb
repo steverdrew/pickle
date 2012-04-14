@@ -85,12 +85,12 @@ Rails.application.config.sorcery.configure do |config|
   #
   config.twitter.key = "uEhHdwRk7hZwjOBaBtWKXQ"
   config.twitter.secret = "oJxl1NV27a7PNRRpnYzcHdTzPrAnPTruzHg6yj0u8"
-  config.twitter.callback_url = "http://localhost:3000/oauth/callback?provider=twitter"
+  config.twitter.callback_url = "http://pickle.herokuapp.com/oauth/callback?provider=twitter"
   config.twitter.user_info_mapping = {:username => "screen_name"}
   #
   config.facebook.key = "363285437050502"
   config.facebook.secret = "2a3d40430dc0b7b0e83657d0f24eee27"
-  config.facebook.callback_url = "http://localhost:3000/oauth/callback?provider=facebook"
+  config.facebook.callback_url = "http://pickle.herokuapp.com/oauth/callback?provider=facebook"
   config.facebook.user_info_mapping = {:email => "email", :name => "name", :first_name => "first_name", 
       :middle_name => "middle_name", :last_name => "last_name", :gender => "gender"}
   config.facebook.scope = "email" #etc
@@ -101,10 +101,10 @@ Rails.application.config.sorcery.configure do |config|
   # config.github.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=github"
   # config.github.user_info_mapping = {:email => "name"}
   #
-  # config.google.key = ""
-  # config.google.secret = ""
-  # config.google.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=google"
-  # config.google.user_info_mapping = {:email => "email", :username => "name"}
+  config.google.key = "pickle.herokuapp.com"
+  config.google.secret = "lD1W895I3yx3FofJr6DJLoOU"
+  config.google.callback_url = "http://pickle.herokuapp.com/oauth/callback?provider=google"
+  config.google.user_info_mapping = {:email => "email", :name => "name"}
   #
   # To use liveid in development mode you have to replace mydomain.com with
   # a valid domain even in development. To use a valid domain in development
