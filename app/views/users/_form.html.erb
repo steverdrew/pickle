@@ -1,0 +1,84 @@
+<%= form_for(@user,:html => { :class => "form-inline"}) do |f| %>
+	<div class="well">
+		<fieldset>		
+			<% if !current_user %>
+				<h2><%= t 'new.user.form.title' %></h2>
+			<% else %>
+				<h2><%= t 'edit.user.form.title' %></h2>
+			<% end %>
+			<div class="control-group">
+				<%= f.label :first_name, t('new.user.form.first_name'), class: "required control-label" %>
+				<div class="controls">
+					<%= f.text_field :first_name, class: "required input-xlarge" %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :last_name, t('new.user.form.last_name'), class: "required control-label" %>
+				<div class="controls">
+				  <%= f.text_field :last_name, class: "required input-xlarge" %>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<div class="controls">
+					<label class="checkbox">
+						<%= f.check_box :is_owner %>
+					    <%= t 'new.user.form.property_owner' %>
+					</label>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :email,t('new.user.form.email'), class: "required control-label", id: "user_id"%>
+				<% error = @user.errors[:email] %>
+				<span class="badge badge-error"> <%= "..." && error[0] %></span>
+				<div class="controls">
+					<%= f.text_field :email, class: "required input-xlarge" %>
+	    		</div>
+			</div>
+			<% if !current_user %>
+				<div class="control-group">
+					<div class="controls">
+						<%= f.text_field :email_confirmation, class: "input-xlarge", placeholder: "and again, just to be sure..." %>
+					</div>
+				</div>
+			<% end %>
+			
+			<% if !current_user %>
+			<div class="control-group">
+				<%= f.label :password,t('new.user.form.password'), class: "required control-label"%>
+				<% error = @user.errors[:password] %>
+				<span class="badge badge-error"> <%= "..." && error[0] %></span>
+				<div class="controls">
+					<%= f.password_field :password, class: "input-xlarge" %>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+		    		<%= f.password_field :password_confirmation, class: "input-xlarge", placeholder: "and again, just to be sure..."%>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<label class="checkbox">
+			    		<%= f.check_box :terms_accepted%> 
+						<%= t 'new.user.form.terms_html' %>
+		      		</label>
+					<% error = @user.errors[:base] %>
+				</div>
+				<span class="badge badge-error"> <%= "..." && error[0] %></span>
+			</div>
+			<% end %>
+		</fieldset>
+	</div>
+	<div class="modal-footer">
+		<%= link_to "Cancel", root_path, class: "btn" %>
+    	<% if !current_user %>
+    		<%= f.submit t('new.user.form.submit'), class: "btn btn-primary" %>
+    	<% else %>
+   		 	<%= f.submit t('edit.user.form.submit'), class: "btn btn-primary" %>
+    	<% end %>
+
+	</div>		
+<% end %>	
+
+
