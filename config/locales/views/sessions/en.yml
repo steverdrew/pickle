@@ -13,6 +13,11 @@ en:
         error_alert: "Login failed. Please check your credentials."
         success_alert: "Login successful!"
         forgot_pass_html: <a href="#">Forgotten Password?</a>
-        remember_me: "Remember Me"       
+        remember_me: "Remember Me"
+               
       logout:
         alert_html: Successfully logged out!
+
+      provider: 
+        title: "Use your existing provider"  
+        sub_text: "Log back in using an existing account"

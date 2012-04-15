@@ -1,0 +1,43 @@
+<nav>
+	<ul class="nav nav-pills pull-right">
+	    <% if current_user %>
+	  		<li class="dropdown" id="account">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+			      <%= name(current_user)%> (4)
+			      <b class="caret"></b>
+			    </a>
+			    <ul class="dropdown-menu">
+			     	<li><a href="/profile">My Profile</a></li>
+			      	<li><a href="#">My Ratings</a></li>
+			      	<li><a href="#">My Bookings</a></li>
+			      	<li><a href="#">Message Centre (2) </a></li>
+				   	<li><a href="#">Friends & Family</a></li>
+				   	<li class="divider"></li>
+			   		<li><a href="#">Change Password</a></li>
+			    </ul>
+			</li>
+			<% if is_owner(current_user) %>
+				<li class="dropdown" id="owner">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+				      My Properties (10)
+				      <b class="caret"></b>
+				    </a>
+				    <ul class="dropdown-menu">
+				      <li><a href="#">Manage</a></li>
+				      <li><a href="#">Bookings (3)</a></li>
+				    </ul>
+				</li>
+			<% end %>
+			
+			<li><%= link_to "Logout", :logout %></li>
+	  	<% else %>
+	  		<li><%= link_to "Register", register_path %></li>
+	  		<li><%= link_to "Login", login_path %></li>
+	  	<% end %>
+	  	<li>
+	    	<%= render "/layouts/menu_search"%>
+		</li>
+		
+	  	<!--edit_user_path(current_user.id-->
+	</ul>
+</nav>

@@ -1,4 +1,4 @@
-<h2>Welcome Back!</h2>
+<h1>Welcome Back!</h1>
 <div class="row">
 	<div class="span6">		
 		<%= render 'form' %>
@@ -6,12 +6,15 @@
 	</div>
 	<div class="span6">	
 		<div class="well">
-			<form class="form-horizontal">
-				<fieldset>
-					<legend>Already using one of these?</legend>
-					<p class="help-block">Select an existing provider for a no hassle login!</p>
-				</fieldset>
-			</form>
+			<h2><Already using one of these?><%= t('new.session.provider.title')%></h2>
+			<div class="alert alert-info center">
+				<%= t('new.session.provider.sub_text')%>
+			</div>
+			<div class="center">
+				<%= link_to 'Twitter', auth_at_provider_path(:provider => :twitter) %> | 
+				<%= link_to 'Facebook', auth_at_provider_path(:provider => :facebook) %> |
+				<%= link_to 'Google', auth_at_provider_path(:provider => :google) %>
+			</div>
 		</div>
 	</div>
 </div>

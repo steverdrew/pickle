@@ -7,9 +7,9 @@ class User < ActiveRecord::Base
   has_many :authentications, :dependent => :destroy
   accepts_nested_attributes_for :authentications
   
-  attr_accessible :email, :email_confirmation, :password, :password_confirmation, :terms_accepted, :profiles_attributes , :authentications_attributes
-  has_many :profiles
-  accepts_nested_attributes_for :profiles
+  attr_accessible :email, :email_confirmation, :password, :password_confirmation, 
+    :terms_accepted , :authentications_attributes,
+    :first_name, :last_name, :is_owner
   
   validates_presence_of :password, :on => :create
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
 
   def validate_terms
       if !terms_accepted
-        self.errors.add :base, "need to be accepted"
+        self.errors.add :base, "Terms and conditions need to be accepted"
       end
   end
 end

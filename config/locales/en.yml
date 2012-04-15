@@ -4,3 +4,5 @@
 en:
   defaults:
     read_more: "read more"
+
+  authenticated_html: To view this page you need to <a href='/register'>register</a> or <a href='/login'>login</a> first.

@@ -4,8 +4,10 @@
 en:
   new:
     user:
+      title: "Welcome Aboard!"
+      
       form:
-        legend: "Register for a new account"
+        title: "Register for a new account"
         first_name: "First Name"
         last_name: "Last Name"
         email: "Email"
@@ -13,6 +15,15 @@ en:
         password: "Password"
         password_help: "Re enter your password"
         property_owner: "I'm a property owner"
-        register_now: "Register Now!"
+        submit: "Register Now!"
         terms_html: I've read the <a data-toggle="modal" href="#terms">terms and conditions</a>
+      
+      provider: 
+        title: "Already using one of these?"  
+        sub_text: "Select an existing provider for a no hassle sign up!"
+  
+  edit:
+    user:
+      form:
+        submit: "Update"
         

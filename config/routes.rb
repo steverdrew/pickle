@@ -1,23 +1,16 @@
 Pickle::Application.routes.draw do
 
-  get "oauths/oauth"
-
-  get "oauths/callback"
-
-  get "password_resets/create"
-  get "password_resets/edit"
-  get "password_resets/update"
-
   resources :users
   resources :sessions
   resources :password_resets
   
   root to: 'pages#home'
-  
+ 
   get "pages/home"
   
   match '/register',   to: 'users#new'
   match '/login',   to: 'sessions#new'
+  match '/profile', to: 'users#edit'
   match 'login' => 'sessions#new', :as => :login
   match 'logout' => 'sessions#destroy', :as => :logout
   match "oauth/callback" => "oauths#callback"

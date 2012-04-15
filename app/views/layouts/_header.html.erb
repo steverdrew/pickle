@@ -1,21 +1,9 @@
 <header class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">  
-      <%= link_to "cloudlets.co.uk", root_path, id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
-       		<li><%= link_to "Who We Are", "#" %></li>
-          	<li><%= link_to "Contact Us", "#" %></li>
-          	<% if current_user %>
-          		<li><%= link_to "Profile", edit_user_path(current_user.id) %></li>
-      			<li><%= link_to "Logout", :logout %></li>
-          	<% else %>
-          		<li><%= link_to "Register", register_path %></li>
-          		<li><%= link_to "Login", login_path %></li>
-          	<% end %>
-        </ul>
-      </nav>
-    </div>
-  </div>
+	<div class="navbar-inner">
+    	<div class="container">  
+    		<%= link_to "cloudlets.co.uk", root_path, id: "logo" %>
+    		<%= render "layouts/menu" %>
+    	</div>
+	</div>
 </header>
 
