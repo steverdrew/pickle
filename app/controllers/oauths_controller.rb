@@ -10,6 +10,7 @@ class OauthsController < ApplicationController
   def callback
     provider = params[:provider]
     if @user = login_from(provider)
+      accept_terms current_user
       redirect_to root_path, :notice => "Logged in from #{provider.titleize}!"
     else
       begin
@@ -23,4 +24,12 @@ class OauthsController < ApplicationController
       end
     end
   end
+  
+  private
+ 
+  def accept_terms(user)
+    accepted = user.update_attribute("terms_accepted",true)
+    return accepted
+  end
+  
 end

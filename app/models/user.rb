@@ -1,15 +1,13 @@
 class User < ActiveRecord::Base
   
+  attr_accessible :email, :email_confirmation, :password, :password_confirmation, :terms_accepted , :authentications_attributes, :first_name, :last_name, :is_owner  
+  
   authenticates_with_sorcery! do |config|
     config.authentications_class = Authentication
   end
   
   has_many :authentications, :dependent => :destroy
   accepts_nested_attributes_for :authentications
-  
-  attr_accessible :email, :email_confirmation, :password, :password_confirmation, 
-    :terms_accepted , :authentications_attributes,
-    :first_name, :last_name, :is_owner
   
   validates_presence_of :password, :on => :create
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

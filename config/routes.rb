@@ -7,6 +7,7 @@ Pickle::Application.routes.draw do
   root to: 'pages#home'
  
   get "pages/home"
+  get "users/edit"
   
   match '/register',   to: 'users#new'
   match '/login',   to: 'sessions#new'

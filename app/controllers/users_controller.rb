@@ -6,11 +6,6 @@ class UsersController < ApplicationController
     @user = User.new
   end
   
-  def edit
-    require_login
-    @user = current_user
-  end
-  
   def create
     @user = User.new(params[:user])
     if @user.save
@@ -31,25 +26,21 @@ class UsersController < ApplicationController
     end
   end
 
-  def update
-    @user = User.find(current_user)
-    respond_to do |format|
-      if @user.update_attributes(params[:user])
-        format.html { redirect_to(@user, :notice => 'Your details were successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
-      end
-    end
+  def edit
+    require_login
+    @user = current_user
   end
   
-  def show
-    @user = User.find(current_user)
-    
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @article }
+  def update   
+    @user = current_user
+    if @user.update_attributes(params[:user])
+      redirect_to profile_path
+      flash[:success] = "Successfully updated profile."
+    else
+      # print the errors to the development log
+      Rails.logger.info(@user.errors.messages.inspect)
+      render :action => 'edit'
     end
-  end
+end
+  
 end

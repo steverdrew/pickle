@@ -1,4 +1,5 @@
 module UsersHelper
+  
   def is_owner(user)
     is_owner = user.is_owner
     logger.info "**************"
@@ -17,5 +18,5 @@ module UsersHelper
     end
     return name
   end
-    
+  
 end
