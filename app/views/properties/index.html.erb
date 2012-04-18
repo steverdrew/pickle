@@ -1,0 +1,16 @@
+<h1>My Properties</h1>
+
+<table>
+  <tr>
+  </tr>
+  <% for property in @properties %>
+    <tr>
+      <td><%= property.name %></td>
+      <td><%= link_to "View", property %></td>
+      <td><%= link_to "Edit", edit_property_path(property) %></td>
+      <td><%= link_to "Delete", property, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Add a Property", new_property_path %></p>

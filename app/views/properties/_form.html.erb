@@ -1,0 +1,31 @@
+<%= form_for(@property,:html => { :class => "form-inline"}) do |f| %>
+	<%= @property.errors[:name] %>
+	<div class="well">
+		<fieldset>
+			<legend><%= t('new.property.form.legend')%></legend>
+			<div class="control-group">
+				<%= f.label :name, t('new.property.form.name'), class: "required control-label" %>
+				<div class="controls">
+					<%= f.text_field :name, class: "required input-xlarge" %>
+				</div>
+			</div>
+		    <div class="control-group">
+				<%= f.label :name, t('new.property.form.tagline'), class: "required control-label" %>
+				<div class="controls">
+					<%= f.text_field :name, class: "input-xlarge" %>
+				</div>
+			</div> 	
+			<div class="control-group">
+				<label class="control-label"><%= t('new.property.profile_photo') %>:</label> 
+				<%= file_field 'upload', 'datafile', class: "required control-label" %>
+				
+			</div>
+		    	
+		</fieldset>
+	</div>
+	<div class="modal-footer">
+		<%= link_to "Back to List", properties_path, class: "btn" %>
+		<%= f.submit t('new.property.form.submit'), class: "btn btn-primary" %>
+	</div>
+<% end %>
+

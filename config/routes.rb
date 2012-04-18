@@ -3,25 +3,33 @@ Pickle::Application.routes.draw do
   resources :users
   resources :sessions
   resources :password_resets
+  resources :properties
   
+  #root
   root to: 'pages#home'
- 
-  get "pages/home"
-  get "users/edit"
   
+  #users
   match '/register',   to: 'users#new'
-  match '/login',   to: 'sessions#new'
   match '/profile', to: 'users#edit'
-  match 'login' => 'sessions#new', :as => :login
-  match 'logout' => 'sessions#destroy', :as => :logout
-  match "oauth/callback" => "oauths#callback"
-  match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
-
+  
   resources :users do
     member do
       get :activate
     end
   end
+  
+  #sessions
+  match '/login',   to: 'sessions#new'
+  match 'login' => 'sessions#new', :as => :login
+  match 'logout' => 'sessions#destroy', :as => :logout
+  
+  #oauth
+  match "oauth/callback" => "oauths#callback"
+  match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+  
+  #properties
+  match '/properties',   to: 'properties#index'
+  match '/new_property', to: 'properties#new'
   
   
   # The priority is based upon order of creation:

@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
     config.authentications_class = Authentication
   end
   
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  
   has_many :authentications, :dependent => :destroy
   accepts_nested_attributes_for :authentications
   

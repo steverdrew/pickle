@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120414160250) do
+ActiveRecord::Schema.define(:version => 20120417212555) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(:version => 20120414160250) do
     t.string   "first_name"
     t.string   "last_name"
     t.boolean  "is_owner"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "properties", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "tagline"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -52,6 +60,10 @@ ActiveRecord::Schema.define(:version => 20120414160250) do
     t.string   "gender"
     t.string   "username"
     t.boolean  "is_owner"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["activation_token"], :name => "index_users_on_activation_token"

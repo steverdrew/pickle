@@ -1,6 +1,7 @@
-<%= form_for(@user,:html => { :class => "form-inline"}) do |f| %>
+<%= form_for(@user,:html => { :class => "form-inline", :multipart => true}) do |f| %>
 	<div class="well">
-		<fieldset>		
+		<fieldset>	
+			<%= f.file_field :avatar %>	
 			<% if !current_user %>
 				<h2><%= t 'new.user.form.title' %></h2>
 			<% else %>

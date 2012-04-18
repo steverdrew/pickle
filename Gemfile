@@ -4,6 +4,7 @@ gem 'rails', '3.2.2'
 gem 'bootstrap-sass-rails'
 gem 'sorcery'
 gem 'sass-rails',   '~> 3.2.3'
+gem "paperclip", "~> 3.0"
  
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
