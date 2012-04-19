@@ -1,14 +1,12 @@
 <div class="center hero-unit"> 
-	<table>
-    	<tr>
-      		<td>
-      			<%= render 'shared/features' %>
-      		</td>
-      		<td>
-      			<%= render 'shared/righthand_home' %>
-	    	</td>
-	    </tr>
-	</table>
+	<div class="row">
+    	<div class="span8">
+    		<%= render 'pages/home/features' %>
+    	</div>
+    	<div class="span4">
+      		<%= render 'pages/home/righthand_home' %>
+		</div>
+	</div>
 </div>
      
 <!-- Example row of columns -->
@@ -19,7 +17,7 @@
         <p><a class="btn" href="#">View details &raquo;</a></p>
 	</div>
     <div class="span4">
-    	<%= render 'shared/quick_search' %>
+    	<%= render 'pages/home/quick_search' %>
     </div>
     <div class="span4">
     	<h2>Late Deals &amp Early Birds</h2>
@@ -29,7 +27,7 @@
 </div>
 
 
-<%= render 'shared/featured_properties' %>
+<%= render 'pages/home/featured_properties' %>
 
 
 
